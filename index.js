@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const path = require('path');
-const generateMarkdown = require('.utils/generateMarkdown');
+
+const generateMarkdown = require('./Develop/utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -39,26 +39,20 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'dependencies',
+        name: 'test',
         message: 'What command should be run to install dependencies?',
         validate: (value)=>{ if(value){return true} else {return 'Must input value to continue'}},
     },
     {
         type: 'input',
-        name: 'commands',
-        message: 'What command should be run to run tests?',
-        validate: (value)=>{ if(value){return true} else {return 'Must input value to continue'}},
-    },
-    {
-        type: 'input',
         name: 'usage',
-        message: 'What does the user need to know about using the repo?',
+        message: 'What does the user need to know about using the repo? (Be as detailed as possible)',
         validate: (value)=>{ if(value){return true} else {return 'Must input value to continue'}},
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'What does the user need to know about contributing to the repo?',
+        message: 'Who contributed to this project?',
         validate: (value)=>{ if(value){return true} else {return 'Must input value to continue'}},
     },
 ];
@@ -73,34 +67,12 @@ function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            //do stuff with the answers
-            console.log(answers);
-
             //after all answers are collected, write to file!
+            console.log(answers)
             //TODO - build a string that uses our answers to generate some markdown, and write that to our file as the 'data' parameter. (replace the test values below)
-            writeToFile('README.md', 'here is some data');
+            writeToFile('README.md', generateMarkdown(answers));
 
-            const template = `${projectName}
-
-            # ${data.projectName}
-            https://github.com/${data.github}/${data.projectName}
-            # Description
-            ${data.Description}
-            #Table of Contents
-            * [Installation](#installation)
-            * [Usage](#usage)
-            * [License](#license)
-            * [Contributing](#contributing)
-            # Installation
-            The following necessary dependencies must be installed to run the application
-            # Usage
-            In order to use this app, ${data.usage}
-            # License
-            This project is licensed under the ${data.license} license.
-            ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
-            # Contributing
-            Contributors: ${data.contributing}`
-    
+            
         })
 }
 
