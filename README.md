@@ -1,10 +1,12 @@
-# t
+# d
 
-  https://github.com/t/t
+  ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+  https://github.com/d/d
   # Description
-  t
+  d
 
-  #Table of Contents
+  # Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -16,18 +18,17 @@
   The following necessary dependencies must be installed to run the application
 
   # Usage
-  In order to use this app, t
+  In order to use this app, d
 
   # License
   This project is licensed under the MIT license.
-  ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
 
   # Contributing
-  Contributors: t
+  Contributors: d
 
   # Tests
-  Teh following is needed to run the test: undefined
+  The following is needed to run the test: undefined
 
   # Questions
-  If you have any questions about the repository, please contact/email t
-
+  If you have any questions about the repository, please contact/email d <br />
+  My GitHub profile is found at [GitHub Profile](https//GitHub.com/d)
