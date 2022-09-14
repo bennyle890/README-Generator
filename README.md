@@ -15,7 +15,9 @@ This is a professional README generator that will create a README for your proje
   The following necessary dependencies must be installed to run the application
 
   # Usage
-  In order to use this app, you will need Visual Studio Code and Node.js. This will also require you to install inquirer version 8.2.4.
+  In order to use this app, you will need Visual Studio Code and Node.js. This will also require you to install inquirer version 8.2.4. Attached below is a photo of Visual Code with an example of the ReadMe before opening in preview. 
+
+![ReadMe Photo](./Develop/images/ReadMeGen.png)
 
   # Questions
   If you have any questions about the repository, please contact/email benny.le890@gmail.com <br />
